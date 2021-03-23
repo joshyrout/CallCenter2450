@@ -5,7 +5,8 @@ enum CallStatus{
     Complete,
     InProgress
 }
-public class CallHistoryData {
+public class CallHistoryData
+{
     private int callID;
     private int agentID;
     private int lengthOfCallInSeconds;
@@ -13,7 +14,8 @@ public class CallHistoryData {
     private String reasonForCall;
     private CallStatus callStatus;
 
-    public CallHistoryData(int callID, int agentID, int length, LocalDateTime date, String reason, CallStatus status){
+    public CallHistoryData(int callID, int agentID, int length, LocalDateTime date, String reason, CallStatus status)
+    {
 
     }
 }

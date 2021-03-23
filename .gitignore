@@ -1,9 +1,8 @@
-
 bin/module-info.class
 .project
 .classpath
 .settings/org.eclipse.jdt.core.prefs
 src/module-info.java
-src/CallCenter2450.iml
 /.idea/
 /out/
+/CallCenter2450.iml
