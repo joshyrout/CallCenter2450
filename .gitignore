@@ -6,3 +6,4 @@ bin/module-info.class
 src/module-info.java
 src/CallCenter2450.iml
 /.idea/
+/out/
