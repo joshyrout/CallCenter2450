@@ -1,7 +1,8 @@
 package core;
 
 import java.time.LocalDateTime;
-enum CallStatus{
+enum CallStatus
+{
     Complete,
     InProgress
 }
