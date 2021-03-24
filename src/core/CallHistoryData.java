@@ -21,6 +21,7 @@ public class CallHistoryData
         this.agentID = agentID;
         this.lengthOfCallInSeconds = length;
         this.reasonForCall = reason;
+        this.dateOfCall = date;
         setCallStatus(status);
     }
 
@@ -57,5 +58,21 @@ public class CallHistoryData
     public void setCallStatus(CallStatus callStatus)
     {
         this.callStatus = callStatus;
+    }
+
+    @Override
+    public String toString() {
+        /*
+        System.out.println("Object: " + i   + " CallID: " + obj.getCallID()
+                                                + " AgentID: " + obj.getAgentID()
+                                                + " Length: " + obj.getLengthOfCall()
+                                                + " Date: " + obj.getDateOfCall()
+                                                + " Reason: " + obj.getReasonForCall()
+                                                + " Status: " + obj.getCallStatus());
+         */
+        StringBuilder sb = new StringBuilder();
+        String.format("");
+
+        return "CallHistoryData{}";
     }
 }
