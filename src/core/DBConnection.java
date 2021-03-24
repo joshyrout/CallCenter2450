@@ -40,11 +40,11 @@ public class DBConnection
         List<CallHistoryData> callHistory = new ArrayList<CallHistoryData>();
         List<PaymentHistoryData> paymentHistory = new ArrayList<PaymentHistoryData>();
 
-        String connectionString = "jdbc:mysql://database-1.crldyhae3ofh.us-east-2.rds.amazonaws.com:3306/testdb";
+        String connectionString = "jdbc:mysql://database-1.crldyhae3ofh.us-east-2.rds.amazonaws.com:3306/CallCenter";
         String dbLogin = "javauser";
         String dbPassword = "TotallySecure";
         Connection conn = null;
-        String sql = "SELECT * FROM testdb.callHistory WHERE customerID = " + customerID;
+        String sql = "SELECT * FROM CallCenter.callhistory WHERE customerID = " + customerID + " ORDER BY date DESC LIMIT 10";
 
         try
         {
@@ -126,7 +126,7 @@ public class DBConnection
     public static void main(String[] args)
     {
         DBConnection instance = DBConnection.getInstance();
-        instance.retrieveCustomerData(15);
+        instance.retrieveCustomerData(23);
         CallHistoryData[] testArray = instance.getCallHistoryArray();
 
         for(int i = 0; i < testArray.length; i++)
