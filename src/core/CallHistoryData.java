@@ -60,19 +60,31 @@ public class CallHistoryData
         this.callStatus = callStatus;
     }
 
-    @Override
-    public String toString() {
-        /*
-        System.out.println("Object: " + i   + " CallID: " + obj.getCallID()
-                                                + " AgentID: " + obj.getAgentID()
-                                                + " Length: " + obj.getLengthOfCall()
-                                                + " Date: " + obj.getDateOfCall()
-                                                + " Reason: " + obj.getReasonForCall()
-                                                + " Status: " + obj.getCallStatus());
-         */
+    //TODO: This is really ugly, if i have time ill come back and update it.
+    public String toString(int maxLength) {
         StringBuilder sb = new StringBuilder();
-        String.format("");
+        String format = "%-5s %-7s %-4s %-20s %-" + maxLength + "s %-10s";
+        int position = 0;
+        if((reasonForCall.length() - position) > maxLength)
+        {
+            String reasonConcat = reasonForCall.substring(position, (position + maxLength - 1));
+            sb.append(String.format(format,callID, agentID, lengthOfCallInSeconds, dateOfCall, reasonConcat, callStatus));
+            position = (position + maxLength - 1);
 
-        return "CallHistoryData{}";
+            while((reasonForCall.length() - position) > 0)
+            {
+                if ((reasonForCall.length() - position) > maxLength)
+                {
+                    reasonConcat = reasonForCall.substring(position,(position + maxLength - 1));
+                } else
+                {
+                    reasonConcat = reasonForCall.substring(position);
+                }
+                sb.append(String.format("\n" + format, "", "", "", "", reasonConcat, ""));
+                position = (position + maxLength - 1);
+            }
+        } else sb.append(String.format(format,callID, agentID, lengthOfCallInSeconds, dateOfCall, reasonForCall, callStatus));
+
+    return sb.toString();
     }
 }

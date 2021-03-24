@@ -1,5 +1,6 @@
 package core;
 
+import java.awt.*;
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -131,12 +132,7 @@ public class DBConnection
         for(int i = 0; i < testArray.length; i++)
         {
             CallHistoryData obj = testArray[i];
-            System.out.println("Object: " + i   + " CallID: " + obj.getCallID()
-                                                + " AgentID: " + obj.getAgentID()
-                                                + " Length: " + obj.getLengthOfCall()
-                                                + " Date: " + obj.getDateOfCall()
-                                                + " Reason: " + obj.getReasonForCall()
-                                                + " Status: " + obj.getCallStatus());
+            System.out.println(obj.toString(40));
         }
     }
 }
