@@ -5,5 +5,4 @@ bin/module-info.class
 src/module-info.java
 /.idea/
 /out/
-src/SqlStatementGen
-
+/src/SqlStatementGen
