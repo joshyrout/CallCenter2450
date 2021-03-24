@@ -17,6 +17,45 @@ public class CallHistoryData
 
     public CallHistoryData(int callID, int agentID, int length, LocalDateTime date, String reason, CallStatus status)
     {
+        this.callID = callID;
+        this.agentID = agentID;
+        this.lengthOfCallInSeconds = length;
+        this.reasonForCall = reason;
+        setCallStatus(status);
+    }
 
+    public int getCallID()
+    {
+        return callID;
+    }
+
+    public int getAgentID()
+    {
+        return agentID;
+    }
+
+    public int getLengthOfCall()
+    {
+        return lengthOfCallInSeconds;
+    }
+
+    public LocalDateTime getDateOfCall()
+    {
+        return dateOfCall;
+    }
+
+    public String getReasonForCall()
+    {
+        return reasonForCall;
+    }
+
+    public CallStatus getCallStatus()
+    {
+        return callStatus;
+    }
+
+    public void setCallStatus(CallStatus callStatus)
+    {
+        this.callStatus = callStatus;
     }
 }
