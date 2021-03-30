@@ -79,17 +79,11 @@ public class Controller implements Initializable
         }
 
         status = new TableColumn<>();
-        status.setPrefWidth(100);
+        status.setPrefWidth(125);
         status.setText("Call Status");
-        ArrayList<String> strings = new ArrayList<>();
-        strings.add(CallStatus.Complete.toString());
-        strings.add(CallStatus.InProgress.toString());
-        ObservableList values = FXCollections.observableArrayList(strings);
-        status.setCellFactory(ComboBoxTableCell.<CallHistoryData, String>forTableColumn(new DefaultStringConverter(), values));
         status.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().getCallStatus().toString()));
-        status.setOnEditCommit(e -> { System.out.printf("Test"); });
 
-        status.setEditable(true);
+        status.setEditable(false);
         callHistory.getColumns().add(status);
 
 
