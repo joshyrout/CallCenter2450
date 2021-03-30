@@ -16,9 +16,9 @@
       </TableView>
       <FlowPane hgap="5.0" GridPane.rowIndex="2">
          <children>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Payments" />
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Call History" />
-            <Button layoutX="115.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Button" />
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="125.0" text="Payments" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="125.0" text="Call History" />
+            <Button layoutX="115.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="125.0" text="Pin Maintenence" />
          </children>
       </FlowPane>
       <Separator prefHeight="5.0" prefWidth="200.0" style="-fx-background-color: Black;" GridPane.rowIndex="3" GridPane.valignment="CENTER" />

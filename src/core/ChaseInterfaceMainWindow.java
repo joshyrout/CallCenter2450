@@ -10,7 +10,6 @@ import javafx.stage.Stage;
 public class ChaseInterfaceMainWindow extends Application
 {
 
-    TableView tv = new TableView();
     @Override
     public void start(Stage primaryStage) throws Exception
     {

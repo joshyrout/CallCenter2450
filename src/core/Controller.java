@@ -38,9 +38,7 @@ public class Controller implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        //  public CallHistoryData(int callID, int agentID, int length, LocalDateTime date, String reason, CallStatus status)
         data = FXCollections.observableArrayList();
-
 
         DBConnection instance = DBConnection.getInstance();
         instance.retrieveCustomerData(3);
@@ -73,7 +71,6 @@ public class Controller implements Initializable
                 };
         });
             reason.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().getReasonForCall()));
-
 
             index++;
         }
